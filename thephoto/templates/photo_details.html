@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1>{{ photo.title }}</h1>
+<small>
+    By: {{ photo.author.first_name }} {{ photo.author.last_name }}
+</small><br/>
+<hr>
+{{ photo.description }}
+<br/><br/>
+<a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+<br/>
+
+{% endblock %}

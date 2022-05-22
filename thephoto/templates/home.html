@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1>Photos</h1>
+
+<ul>
+{% for photo in object_list %}
+    <li>
+        <a href="{% url 'detail' photo.pk %}">
+            {{ photo.title }}
+        </a> - 
+            {{ photo.author.first_name }} {{ photo.author.last_name }}
+        <br/>
+<!--            {{ photo.description }}-->
+</li>
+{% endfor%}
+</ul>
+
+{% endblock %}
+
+
